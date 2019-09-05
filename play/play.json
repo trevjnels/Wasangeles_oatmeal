@@ -1,4 +1,4 @@
-{
+
 	"advisories": [
 		{
 			"advisory": {
@@ -21,9 +21,8 @@
 				"overall_danger_rose": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
 				"overall_danger_rose_image": "/sites/default/files/forecast/201905/20190501-103022-5.png",
 				"overall_danger_rating": "None",
-				"region": "Salt Lake",
-				"trevor_danger_rose": "https://utahavalanchecenter.org//sites/default/files/forecast/201905/20190501-103022-5.png"
+				"region": "Salt Lake"
 			}
 		}
 	]
-}
+
