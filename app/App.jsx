@@ -11,7 +11,7 @@ import { Temp } from './Temp.jsx';
 
 const appStyle = {
 	// border         : '80px solid #0A4287',
-	width          : '90vw',
+	width          : '100vw',
 	height         : 'auto',
 	display        : 'flex',
 	flexDirection  : 'column',
@@ -27,15 +27,18 @@ const imageStyle = {
 	width     : '140%',
 	position  : 'fixed',
 	top       : '0',
-	// marginRight : '200vw',
+	opacity   : '.55',
 	zIndex    : '-1'
 };
 const mainStyle = {
 	display        : 'flex',
 	flexDirection  : 'column',
 	justifyContent : 'space-evenly',
+	alignItems     : 'center'
 	// height         : '200vw'
-	width          : '100vw'
+	// width          : '100%',
+	// marginLeft     : 'auto',
+	// marginRight    : 'auto'
 	// height: '200vh'
 };
 const roseStyle = {
@@ -55,11 +58,14 @@ const headerStyle = {
 	textShadow : '2px 3px 3px #656A7F'
 	// position  : 'absolute'
 };
-
 const avyReportOpen = {
 	display       : 'flex',
 	flexDirection : 'column',
-	alignItems    : 'center',
+	// alignSelf     : 'center',
+	// textAlign     : 'center',
+	marginLeft    : 'auto',
+	marginRight   : 'auto',
+	// alignSelf     : 'center',
 	width         : '80%'
 };
 const avyReportClosed = {
@@ -141,6 +147,7 @@ class App extends React.Component {
 							}
 							clickH={this.click}
 							report={this.state.UACResults[this.state.region]}
+							state={this.state}
 						/>
 						<Radar />
 						<WebCams />
