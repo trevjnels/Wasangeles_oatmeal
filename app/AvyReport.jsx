@@ -6,7 +6,7 @@ const headerStyle = {
 	marginRight : 'auto',
 	alignSelf   : 'center',
 	fontSize    : '2em'
-};
+}; //
 const header2Style = {
 	marginLeft  : 'auto',
 	marginRight : 'auto',
@@ -15,7 +15,8 @@ const header2Style = {
 const moduleStyle = {
 	display       : 'flex',
 	flexDirection : 'column',
-	alignItems    : 'center'
+	alignItems    : 'center',
+	alignSelf     : 'center'
 };
 export const AvyReport = (props) => {
 	var clickShow =
@@ -43,7 +44,12 @@ export const AvyReport = (props) => {
 				{' '}
 				Avy Report {clickShow}
 			</h2>
-			<div style={props.reportStyle} className="report">
+			<div
+				onClick={() => {
+					props.clickH('report');
+				}}
+				style={props.reportStyle}
+				className="report">
 				<div>{date_issued}</div>
 				<div>{current_conditions}</div>
 				<div>{mountian_weather}</div>

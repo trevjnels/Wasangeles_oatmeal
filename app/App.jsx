@@ -9,36 +9,41 @@ import { Weather } from './Weather.jsx';
 import { WebCams } from './WebCams.jsx';
 import { Temp } from './Temp.jsx';
 
+const flex = {
+	display       : 'flex',
+	width         : '100vw',
+	flexDirection : 'column',
+	alignItems    : 'center'
+};
 const appStyle = {
-	// border         : '80px solid #0A4287',
-	width          : '100vw',
+	border         : '80px solid #0A4287',
+	width          : '100%',
 	height         : 'auto',
 	display        : 'flex',
 	flexDirection  : 'column',
 	justifyContent : 'space-around',
 	alignItems     : 'center',
-	// justifySelf    : 'center',
-	// alignSelf      : 'center'
-	marginLeft     : 'auto',
-	marginRight    : 'auto'
+	justifySelf    : 'center',
+	alignSelf      : 'center'
 };
 const imageStyle = {
 	transform : 'rotate(91deg)',
-	width     : '140%',
+	width     : '150vw',
 	position  : 'fixed',
 	top       : '0',
-	opacity   : '.55',
+	opacity   : '.45',
 	zIndex    : '-1'
 };
 const mainStyle = {
 	display        : 'flex',
 	flexDirection  : 'column',
 	justifyContent : 'space-evenly',
-	alignItems     : 'center'
+	alignItems     : 'center',
+	alignSelf      : 'center',
 	// height         : '200vw'
 	// width          : '100%',
-	// marginLeft     : 'auto',
-	// marginRight    : 'auto'
+	marginLeft     : 'auto',
+	marginRight    : 'auto'
 	// height: '200vh'
 };
 const roseStyle = {
@@ -61,12 +66,13 @@ const headerStyle = {
 const avyReportOpen = {
 	display       : 'flex',
 	flexDirection : 'column',
-	// alignSelf     : 'center',
-	// textAlign     : 'center',
+	alignSelf     : 'center',
+	textAlign     : 'center',
 	marginLeft    : 'auto',
-	marginRight   : 'auto',
+	marginRight   : 'auto'
+
 	// alignSelf     : 'center',
-	width         : '80%'
+	// width         : '80%'
 };
 const avyReportClosed = {
 	display : 'none'
@@ -124,7 +130,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style={flex}>
 				<div style={appStyle}>
 					<div style={headerStyle}>
 						<h1>Avy Oatmeal</h1>
