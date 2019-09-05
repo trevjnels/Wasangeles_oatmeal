@@ -2,8 +2,8 @@ import React from 'react';
 
 export const DangerRose = (props) => {
 	return (
-		<div>
-			<img src={props.rose} />
+		<div style={props.style}>
+			<img src={'https://utahavalanchecenter.org/' + props.rose} />
 		</div>
 	);
 };
