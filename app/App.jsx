@@ -4,22 +4,50 @@ const path = require('path');
 
 import { DangerRose } from './DangerRose.jsx';
 
-// console.log(oatmeal);
 const appStyle = {
-	// backgroundImage : `url("${oatmeal}")`,
-	color : 'red',
-	width : '100vw'
+	// border         : '80px solid #0A4287',
+	width          : '90vw',
+	height         : 'auto',
+	display        : 'flex',
+	flexDirection  : 'column',
+	justifyContent : 'space-around',
+	alignItems     : 'center',
+	// justifySelf    : 'center',
+	// alignSelf      : 'center'
+	marginLeft     : 'auto',
+	marginRight    : 'auto'
 };
 const imageStyle = {
 	transform : 'rotate(91deg)',
-	width     : '120%',
+	width     : '160%',
 	position  : 'fixed',
 	top       : '0',
+	// marginRight : '200vw',
 	zIndex    : '-1'
 };
-
+const mainStyle = {
+	display        : 'flex',
+	flexDirection  : 'column',
+	justifyContent : 'space-evenly',
+	// height         : '200vw'
+	width          : '100vw'
+	// height: '200vh'
+};
 const roseStyle = {
-	// width : '400%'
+	display        : 'flex',
+	width          : '80vw',
+	alignItems     : 'center',
+	justifyContent : 'center',
+	height         : 'auto',
+	alignSelf      : 'center'
+};
+const headerStyle = {
+	fontSize   : '2.5em',
+	alignSelf  : 'center',
+	textAlign  : 'center',
+	color      : '#0A4287',
+	textShadow : '2px 3px 3px #656A7F'
+	// position  : 'absolute'
 };
 
 class App extends React.Component {
@@ -62,49 +90,43 @@ class App extends React.Component {
 			}
 		};
 	}
-	componentDidMount() {
-		// fetch(`https://utahavalanchecenter.org/forecast/${this.state.region}/json`)
-		// 	.then((data) => data.json())
-		// 	.then((jsond) => {
-		// 		this.setState({
-		// 			UACResults : {}
-		// 		});
-		// 	});
-	}
+	componentDidMount() {}
 	render() {
 		return (
-			<div style={appStyle}>
-				<h1>Avy Oatmeal</h1>
-				<p>a bowl a day keeps the burial away</p>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-				<DangerRose
-					rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
-					style={roseStyle}
-				/>
-
+			<div>
+				<div style={appStyle}>
+					<div style={headerStyle}>
+						<h1>Avy Oatmeal</h1>
+						<p>a bowl a day keeps the burial away</p>
+					</div>
+					<div className="main" style={mainStyle}>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						<DangerRose
+							rose={this.state.UACResults.advisories[this.state.region].overall_danger_rose_image}
+							style={roseStyle}
+						/>
+						/>
+					</div>
+				</div>
 				<img style={imageStyle} src="oatmeal.jpg" />
 			</div>
 		);

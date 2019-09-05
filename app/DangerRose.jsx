@@ -1,9 +1,13 @@
 import React from 'react';
 
+var imageStyle = {
+	height : '80%',
+	width  : '80%'
+};
 export const DangerRose = (props) => {
 	return (
 		<div style={props.style}>
-			<img src={'https://utahavalanchecenter.org/' + props.rose} />
+			<img style={imageStyle} src={'https://utahavalanchecenter.org/' + props.rose} />
 		</div>
 	);
 };
