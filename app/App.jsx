@@ -16,7 +16,7 @@ const flex = {
 	alignItems    : 'center'
 };
 const appStyle = {
-	border         : '80px solid #0A4287',
+	// border         : '80px solid #0A4287',
 	width          : '100%',
 	height         : 'auto',
 	display        : 'flex',
@@ -127,6 +127,7 @@ class App extends React.Component {
 			});
 		}
 	}
+	componentDidMount() {}
 
 	render() {
 		return (

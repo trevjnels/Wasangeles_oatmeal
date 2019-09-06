@@ -34,6 +34,12 @@ export const AvyReport = (props) => {
 		avalanche_problem_3_description,
 		overall_danger_rating
 	} = props.report;
+
+	var dates = date_issued.split(', ');
+	dates.shift();
+	dates = dates.join(', ');
+
+	// console.log(dates);
 	return (
 		<div style={moduleStyle}>
 			<h2
@@ -42,7 +48,7 @@ export const AvyReport = (props) => {
 					props.clickH('report');
 				}}>
 				{' '}
-				Avy Report {clickShow}
+				Avy Report - {dates} {clickShow}
 			</h2>
 			<div
 				onClick={() => {

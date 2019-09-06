@@ -17,6 +17,8 @@ export class Radar extends React.Component {
 		script.async = true;
 		script.defer = true;
 		document.body.appendChild(script);
+
+		var script2 = document.createElement('script');
 	}
 	render() {
 		return (
