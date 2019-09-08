@@ -5,7 +5,7 @@ const client = new Client({
 	user     : pgUser,
 	password : pgPassword,
 	host     : awsEndpoint,
-	database : 'avyreports',
+	database : 'avyReports',
 	port     : 5432
 });
 // var dbConfig = {
@@ -26,7 +26,7 @@ client
 		console.log('db connect fail');
 	});
 
-client.query('CREATE TABLE IF NOT EXISTS homes(id SERIAL PRIMARY KEY, type VARCHAR(100))');
+// client.query('CREATE TABLE IF NOT EXISTS homes(id SERIAL PRIMARY KEY, type VARCHAR(100))');
 
 module.exports = client;
 // var client = new pg.Client(dbConfig);
