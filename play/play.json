@@ -38,7 +38,7 @@
 		"content-type": "text/html; charset=utf-8"
 	},
 	"config": {
-		"url": "http://avyoats.com/weather/BCC",
+		"url": "http://avyoats.com:3000/weather/BCC",
 		"method": "get",
 		"headers": { "Accept": "application/json, text/plain, */*" },
 		"transformRequest": [

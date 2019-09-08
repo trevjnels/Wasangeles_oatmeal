@@ -46,7 +46,7 @@ export class Temp extends React.Component {
 	}
 	weatherUpdate() {
 		axios
-			.get(`http://avyoats.com/weather/BCC`)
+			.get(`http://avyoats.com:3000/weather/BCC`)
 			// .then((data) => JSON.parse(data))
 			.then((data) => {
 				console.log(data['data']);
