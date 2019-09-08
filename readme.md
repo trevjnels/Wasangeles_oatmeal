@@ -1,6 +1,6 @@
 A pet project I am building for myself, with the hope that my fellow backcountry skiers/boarders will appreciate. Every time I would go on a ski tour here in SLC, I'd have to check 4-5 websites in the morning to get all of my last checks done. The goal here is to turn those 4-5 get requets into one :) with a simple & small enough single page ui to make this something folks pull out thorughout the day and use as a reference and resource. The swiss army knife of snow saftey information. 
 
-TLDR: I built this to help my fellow backcountry travelers get all of the morning of information they need in one place. 
+TLDR: I built this to help my fellow backcountry travelers get all of the morning-of information they need in one place. 
 
 
 
