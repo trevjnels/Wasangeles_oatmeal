@@ -2,4 +2,5 @@ node_modules
 keys
 
 dist/bundle.js
+dist/maps.js
 # /Users/trevornelson/Desktop/projects/avySite/public

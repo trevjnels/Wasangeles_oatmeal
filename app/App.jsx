@@ -78,6 +78,22 @@ const avyReportClosed = {
 	display : 'none'
 };
 
+const topDivStyle = {
+	display        : 'flex',
+	flexDirection  : 'row',
+	alignItems     : 'center',
+	justifyContent : 'space-evenly',
+	width          : '80%',
+	height         : '50vw'
+};
+
+const weatherDataStyle = {
+	display        : 'flex',
+	flexDirection  : 'column',
+	justifyContent : 'space-between',
+	alignItems     : 'center',
+	height         : '100%'
+};
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -138,12 +154,20 @@ class App extends React.Component {
 						<p>a bowl a day keeps the burial away</p>
 					</div>
 					<div className="main" style={mainStyle}>
-						<div>
+						<div style={topDivStyle}>
+							<div style={weatherDataStyle}>
+								<Temp site={'BCC'} />
+								<Weather site={'BCC'} />
+							</div>
 							<DangerRose
 								clickH={this.click}
 								rose={this.state.UACResults[this.state.region].overall_danger_rose_image}
 								style={roseStyle}
 							/>
+							<div style={weatherDataStyle}>
+								<Temp site={'LCC'} />
+								<Weather site={'LCC'} />
+							</div>
 						</div>
 						<AvyReport
 							reportStyle={
@@ -157,8 +181,6 @@ class App extends React.Component {
 						/>
 						<Radar />
 						<WebCams />
-						<Weather />
-						<Temp />
 					</div>
 				</div>
 				<img style={imageStyle} src="oatmeal.jpg" />

@@ -4,13 +4,15 @@ const camsContainerStyle = {
 	display        : 'flex',
 	flexDirection  : 'row',
 	alignItems     : 'center',
-	justifyContent : 'space-evenly',
-	width          : '100vw'
+	justifyContent : 'space-between',
+	width          : '85vw'
 };
 const camStyle = {
 	border       : '2vw #0A4287 solid',
 	borderRadius : '2vw',
 	marginTop    : '-1.5vw'
+	// width        : '95%'
+	// height       : 'auto'
 };
 
 export const WebCams = (props) => {
@@ -41,7 +43,7 @@ export const WebCams = (props) => {
 						<img style={camStyle} src="http://udottraffic.utah.gov/1_devices/aux16265.jpeg" />
 					</div>
 					<div>
-						<p>7.4 Miles Up</p>
+						<p>7.4 Miles Up - (Mount Superior SE Ridge Shown)</p>
 						<img style={camStyle} src="http://udottraffic.utah.gov/1_devices/aux16267.jpeg" />
 					</div>
 					<div>

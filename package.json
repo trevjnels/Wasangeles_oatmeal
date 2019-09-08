@@ -1,37 +1,38 @@
 {
-	"name": "avysite",
-	"version": "1.0.0",
-	"description": "Constructed to help wasangeles stay safe and informed",
-	"main": "index.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"start": "nodemon backend/server.js",
-		"build": "webpack -d -w",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@progress/kendo-drawing": "^1.5.12",
-		"@progress/kendo-react-gauges": "^3.3.0",
-		"@progress/kendo-react-intl": "^3.3.0",
-		"babel-cli": "^6.26.0",
-		"babel-core": "^6.26.3",
-		"babel-loader": "^7.1.5",
-		"babel-preset-env": "^1.7.0",
-		"babel-preset-latest": "^6.24.1",
-		"babel-preset-react": "^6.24.1",
-		"body-parser": "^1.19.0",
-		"canvas-gauges": "^2.1.5",
-		"cypress": "^3.4.1",
-		"express": "^4.17.1",
-		"moment": "^2.24.0",
-		"morgan": "^1.9.1",
-		"react": "^16.9.0",
-		"react-dom": "^16.9.0",
-		"webpack": "^4.39.3",
-		"webpack-cli": "^3.3.7"
-	}
+  "name": "avysite",
+  "version": "1.0.0",
+  "description": "Constructed to help wasangeles stay safe and informed",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon backend/server.js",
+    "build": "webpack -d -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@progress/kendo-drawing": "^1.5.12",
+    "@progress/kendo-react-gauges": "^3.3.0",
+    "@progress/kendo-react-intl": "^3.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "canvas-gauges": "^2.1.5",
+    "cypress": "^3.4.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
 }
