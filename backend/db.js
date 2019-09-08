@@ -2,10 +2,10 @@ const { Client } = require('pg');
 const { pgUser, pgPassword, awsEndpoint } = require('../keys/privateKeys.js');
 
 const client = new Client({
-	user     : pgUser,
-	password : pgPassword,
+	user     : 'postgres',
+	password : 'postgres',
 	host     : awsEndpoint,
-	database : 'avyreports',
+	// database : 'avyreports',
 	port     : 5432
 });
 // var dbConfig = {
