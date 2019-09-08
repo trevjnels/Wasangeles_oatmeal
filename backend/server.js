@@ -3,7 +3,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const fetch = require('node-fetch');
 
 var port = process.env.PORT || 3000;
 const { bingMapsKey } = require('../keys/keys.js');
