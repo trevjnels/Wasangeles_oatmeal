@@ -12,7 +12,7 @@ export class Radar extends React.Component {
 	}
 	componentDidMount() {
 		var script1 = document.createElement('script');
-		script1.src = `http://localhost:3000/radar`;
+		script1.src = `http://avyoats.com/radar`;
 		script1.async = true;
 		script1.defer = true;
 		document.body.appendChild(script1);
