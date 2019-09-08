@@ -1,7 +1,7 @@
-const pg = require('pg');
+const { Client } = require('pg');
 const { pgUser, pgPassword, awsEndpoint } = require('../keys/privateKeys.js');
 
-const client = new pg.Client({
+const client = new Client({
 	user     : pgUser,
 	password : pgPassword,
 	host     : awsEndpoint,
