@@ -9,7 +9,7 @@ const moment = require('moment');
 // const cors = require('cors');
 const { openWeatherKey, bingMapsKey } = require('../keys/privateKeys.js');
 
-var port = process.env.PORT || 3000;
+var port = 3000;
 // const { bingMapsKey } = require('../keys/keys.js');
 
 const app = express();
