@@ -5,7 +5,7 @@ const client = new Client({
 	user     : 'postgres',
 	password : 'postgres',
 	host     : awsEndpoint,
-	// database : 'avyreports',
+	database : 'avyreports',
 	port     : 5432
 });
 // var dbConfig = {
