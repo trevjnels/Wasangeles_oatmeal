@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { bingMapsKey } from '../keys/keys.js';
 var mapStyle = {
 	width  : '85vw',
 	height : '85vw'
@@ -12,13 +11,20 @@ export class Radar extends React.Component {
 		this.state = {};
 	}
 	componentDidMount() {
-		var script2 = document.createElement('script');
-		script2.src = `https://www.bing.com/api/maps/mapcontrol?key=${bingMapsKey}&callback=loadMapScenario`;
-		script2.async = true;
-		script2.defer = true;
-		document.body.appendChild(script2);
+		var script1 = document.createElement('script');
+		script1.src = `http://localhost:3000/radar`;
+		script1.async = true;
+		script1.defer = true;
+		document.body.appendChild(script1);
 
 		// var script2 = document.createElement('script');
+		// var script2 = document.createElement('script');
+		// script2.src = `https://www.bing.com/api/maps/mapcontrol?key=${bingMapsKey}&callback=loadMapScenario`;
+		// script2.async = true;
+		// script2.defer = true;
+		// document.body.appendChild(script2);
+
+		// // var script2 = document.createElement('script');
 	}
 	render() {
 		return (

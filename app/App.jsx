@@ -5,7 +5,6 @@ const path = require('path');
 import { DangerRose } from './DangerRose.jsx';
 import { AvyReport } from './AvyReport.jsx';
 import { Radar } from './Radar.jsx';
-import { Weather } from './Weather.jsx';
 import { WebCams } from './WebCams.jsx';
 import { Temp } from './Temp.jsx';
 
@@ -157,7 +156,7 @@ class App extends React.Component {
 						<div style={topDivStyle}>
 							<div style={weatherDataStyle}>
 								<Temp site={'BCC'} />
-								<Weather site={'BCC'} />
+								{/* <Weather site={'BCC'} /> */}
 							</div>
 							<DangerRose
 								clickH={this.click}
@@ -166,7 +165,7 @@ class App extends React.Component {
 							/>
 							<div style={weatherDataStyle}>
 								<Temp site={'LCC'} />
-								<Weather site={'LCC'} />
+								{/* <Weather site={'LCC'} /> */}
 							</div>
 						</div>
 						<AvyReport
