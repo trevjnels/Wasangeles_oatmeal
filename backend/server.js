@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const request = require('request');
 const moment = require('moment');
 
-const cors = require('cors');
+// const cors = require('cors');
 const { openWeatherKey, bingMapsKey } = require('../keys/privateKeys.js');
 
 var port = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 	next();
 });
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use('/', express.static('dist'));
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 // https://www.bing.com/api/maps/mapcontrol?key=${bingMapsKey}&callback=loadMapScenario`
@@ -59,14 +59,15 @@ app.get('/maps', (req, res) => {
 }`);
 }); // helper function to expose the map ojbect to the dom. COuld have had it in the html but wanted to serve from here.
 
-if (unix > 1571137200) {
-	// request(`https://utahavalanchecenter.org/forecast/${req.params.region}/json`, (err, resp, body) => {
-	// if (err) {
-	// 	console.log(err)
-	// } else {
-	// }
-	// });
-}
+// if (unix > 1571137200) {
+// 3am on 10/15/2019 next ski season's potential start
+// request(`https://utahavalanchecenter.org/forecast/${req.params.region}/json`, (err, resp, body) => {
+// if (err) {
+// 	console.log(err)
+// } else {
+// }
+// });
+// }
 
 app.get('/avyReport/:region', function(req, res) {
 	var day = 86400; //num of ms in day
