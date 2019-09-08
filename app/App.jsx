@@ -139,7 +139,6 @@ class App extends React.Component {
 					</div>
 					<div className="main" style={mainStyle}>
 						<div>
-							{/* <Temp />  */}
 							<DangerRose
 								clickH={this.click}
 								rose={this.state.UACResults[this.state.region].overall_danger_rose_image}
@@ -159,6 +158,7 @@ class App extends React.Component {
 						<Radar />
 						<WebCams />
 						<Weather />
+						<Temp />
 					</div>
 				</div>
 				<img style={imageStyle} src="oatmeal.jpg" />

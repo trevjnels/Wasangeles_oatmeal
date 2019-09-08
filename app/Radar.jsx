@@ -12,13 +12,13 @@ export class Radar extends React.Component {
 		this.state = {};
 	}
 	componentDidMount() {
-		var script = document.createElement('script');
-		script.src = `https://www.bing.com/api/maps/mapcontrol?key=${bingMapsKey}&callback=loadMapScenario`;
-		script.async = true;
-		script.defer = true;
-		document.body.appendChild(script);
-
 		var script2 = document.createElement('script');
+		script2.src = `https://www.bing.com/api/maps/mapcontrol?key=${bingMapsKey}&callback=loadMapScenario`;
+		script2.async = true;
+		script2.defer = true;
+		document.body.appendChild(script2);
+
+		// var script2 = document.createElement('script');
 	}
 	render() {
 		return (

@@ -19,9 +19,6 @@ const moduleStyle = {
 	alignSelf     : 'center'
 };
 export const AvyReport = (props) => {
-	var clickShow =
-		props.state.reportOpen ? '' :
-		'(click to expand)';
 	var {
 		date_issued,
 		current_conditions,
@@ -39,6 +36,10 @@ export const AvyReport = (props) => {
 	dates.shift();
 	dates = dates.join(', ');
 
+	var clickShow =
+		props.state.reportOpen ? '' :
+		`: ${dates} (click to expand)`;
+
 	// console.log(dates);
 	return (
 		<div style={moduleStyle}>
@@ -48,7 +49,7 @@ export const AvyReport = (props) => {
 					props.clickH('report');
 				}}>
 				{' '}
-				Avy Report - {dates} {clickShow}
+				Avy Report{clickShow}
 			</h2>
 			<div
 				onClick={() => {
