@@ -1,9 +1,9 @@
 const pg = require('pg');
 const { pgUser, pgPassword, awsEndpoint } = require('../keys/privateKeys.js');
 
-const pool = new pg.Pool({
-	user     : pgUser,
-	password : pgPassword,
+const client = new pg.Client({
+	user     : 'postgres',
+	password : 'postgres',
 	host     : awsEndpoint,
 	database : 'avyreports',
 	port     : 5432
@@ -16,6 +16,19 @@ const pool = new pg.Pool({
 // 	port     : 5432
 // };
 
+client
+	.connect()
+	.then(() => {
+		console.log('db has been connected');
+	})
+	.catch((err) => {
+		console.log(err);
+		console.log('db connect fail');
+	});
+
+client.query('CREATE TABLE IF NOT EXISTS homes(id SERIAL PRIMARY KEY, type VARCHAR(100))');
+
+module.exports = client;
 // var client = new pg.Client(dbConfig);
 // client.connect((err) => {
 // 	if (err) {
