@@ -42,9 +42,9 @@ export class Temp extends React.Component {
 				description : 'Rain'
 			}
 		};
+		this.weatherUpdate = this.weatherUpdate.bind(this);
 	}
-
-	componentDidMount() {
+	weatherUpdate() {
 		axios
 			.get(`http://localhost:3000/weather/BCC`)
 			// .then((data) => JSON.parse(data))
@@ -105,6 +105,13 @@ export class Temp extends React.Component {
 			.catch((err) => {
 				console.log(err);
 			});
+	}
+	componentDidMount() {
+		this.weatherUpdate();
+		setInterval(() => {
+			this.weatherUpdate();
+		}, 600000); //updates the weather every 10 min
+
 		//hit server for current temps every min
 	}
 

@@ -142,7 +142,9 @@ class App extends React.Component {
 			});
 		}
 	}
-	componentDidMount() {}
+	componentDidMount() {
+		//udpate avy report from database.
+	}
 
 	render() {
 		return (
