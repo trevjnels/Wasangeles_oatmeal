@@ -149,7 +149,7 @@ export class Temp extends React.Component {
 						<span>{temp} degress f</span>
 					</div>
 					<div>
-						<span>Sunrise: {moment(this.state.LCC.sunrise).format('h:mm:ss a')}</span>
+						<span>Sunrise: {moment(this.state.LCC.sunrise).format()}</span>
 					</div>
 					{/* <div>
 							Mid: <span>{this.state['LCC'].mid} degress</span>
