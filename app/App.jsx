@@ -181,8 +181,9 @@ class App extends React.Component {
 							report={this.state.UACResults[this.state.region]}
 							state={this.state}
 						/>
-						<Radar />
+
 						<WebCams />
+						<Radar />
 					</div>
 				</div>
 				<img style={imageStyle} src="oatmeal.jpg" />
