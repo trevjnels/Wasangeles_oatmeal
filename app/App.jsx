@@ -36,7 +36,7 @@ const imageStyle = {
 const mainStyle = {
 	display        : 'flex',
 	flexDirection  : 'column',
-	justifyContent : 'space-evenly',
+	justifyContent : 'space-around',
 	alignItems     : 'center',
 	alignSelf      : 'center',
 	// height         : '200vw'
@@ -183,6 +183,7 @@ class App extends React.Component {
 						/>
 
 						<WebCams />
+
 						<Radar />
 					</div>
 				</div>
