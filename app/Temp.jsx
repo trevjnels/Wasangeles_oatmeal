@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Weather } from './Weather.jsx';
+import moment from 'moment';
 
 // import { RadialGauge } from '@progress/kendo-react-gauges';
 
@@ -146,6 +147,9 @@ export class Temp extends React.Component {
 				<div>
 					<div>
 						<span>{temp} degress f</span>
+					</div>
+					<div>
+						<span>Sunrise: {moment(this.state.LCC.sunrise).format('h:mm:ss a')}</span>
 					</div>
 					{/* <div>
 							Mid: <span>{this.state['LCC'].mid} degress</span>
