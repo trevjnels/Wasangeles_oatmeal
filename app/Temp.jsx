@@ -98,7 +98,7 @@ export class Temp extends React.Component {
 							deg   : stringed['wind']['deg'],
 							gust  : stringed['wind']['gust']
 						},
-						rain        : { '1h': stringed['rain']['1hr'] },
+						// rain        : { '1h': stringed['rain']['1hr'] },
 						description : stringed['weather'][0]['main'],
 						sunset      : stringed['sys']['sunset'],
 						sunrise     : stringed['sys']['sunrise']
