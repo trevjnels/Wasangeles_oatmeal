@@ -104,7 +104,7 @@ export class Temp extends React.Component {
 						sunrise     : stringed['sys']['sunrise']
 					}
 				});
-				console.log('$$$$$', this.state['BCC']);
+				// console.log('$$$$$', this.state['BCC']);
 			})
 			.catch((err) => {
 				console.log(err);
