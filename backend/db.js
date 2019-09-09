@@ -26,9 +26,53 @@ client
 		console.log('db connect fail');
 	});
 
-// client.query('CREATE TABLE IF NOT EXISTS homes(id SERIAL PRIMARY KEY, type VARCHAR(100))');
+client.query(
+	'CREATE TABLE IF NOT EXISTS report(id serial PRIMARY KEY, date_issued VARCHAR (300) NOT NULL, current_conditions VARCHAR (1000) NOT NULL, avalanche_problem_1 VARCHAR (100) NOT NULL, avalanche_problem_2 VARCHAR (100) NOT NULL, avalanche_problem_3 VARCHAR (100) NOT NULL, avalanche_problem_1_description VARCHAR (2000) NOT NULL, avalanche_problem_2_description VARCHAR (2000) NOT NULL, avalanche_problem_3_description VARCHAR (2000) NOT NULL, bottom_line VARCHAR (500) NOT NULL, overall_danger_rose_image VARCHAR (100) NOT NULL, overall_danger_rating VARCHAR (50) NOT NULL, created_on TIMESTAMP NOT NULL)'
+);
 
-module.exports = client;
+const addRecord = (record) => {
+	var {
+		date_issued,
+		current_conditions,
+		avalanche_problem_1,
+		avalanche_problem_1_description,
+		avalanche_problem_2,
+		avalanche_problem_2_description,
+		avalanche_problem_3,
+		avalanche_problem_3_description,
+		bottom_line,
+		overall_danger_rose_image,
+		overall_danger_rating,
+		date_issued_timestamp
+	} = record;
+	client
+		.query(
+			`INSERT INTO report VALUES (${date_issued_timestamp}, '${date_issued}', '${current_conditions}', '${avalanche_problem_1}', '${avalanche_problem_1_description}', '${avalanche_problem_2}', '${avalanche_problem_2_description}', '${avalanche_problem_3}', '${avalanche_problem_3_description}, '${bottom_line}', '${overall_danger_rose_image}',  '${overall_danger_rating}' );`
+		)
+		// .query(
+		// 	`INSERT INTO report VALUES ('trevor', 'trevor', 'trevor', 'trevor', 'trevor', 'trevor', 'trevor', 'trevor', 'trevor', 'trevor');`
+		// )
+		.then(() => {
+			console.log('sucess in insert');
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
+// date_issued
+// current_conditions
+// avalanche_problem_1
+// avalanche_problem_1_description
+// avalanche_problem_2
+// avalanche_problem_2_description
+// avalanche_problem_3
+//
+// bottom_line
+// overall_danger_rose_image
+//
+
+module.exports = { client, addRecord };
 // var client = new pg.Client(dbConfig);
 // client.connect((err) => {
 // 	if (err) {
