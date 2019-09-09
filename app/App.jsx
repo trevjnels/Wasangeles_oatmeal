@@ -157,18 +157,19 @@ class App extends React.Component {
 					<div className="main" style={mainStyle}>
 						<div style={topDivStyle}>
 							<div style={weatherDataStyle}>
-								<Temp site={'BCC'} />
+								{/* <Temp site={} /> */}
 								{/* <Weather site={'BCC'} /> */}
+								<Temp site={'LCC'} />
 							</div>
 							<DangerRose
 								clickH={this.click}
 								rose={this.state.UACResults[this.state.region].overall_danger_rose_image}
 								style={roseStyle}
 							/>
-							<div style={weatherDataStyle}>
-								<Temp site={'LCC'} />
+							{/* <div style={weatherDataStyle}>
+						
 								{/* <Weather site={'LCC'} /> */}
-							</div>
+							{/* </div> */}
 						</div>
 						<AvyReport
 							reportStyle={

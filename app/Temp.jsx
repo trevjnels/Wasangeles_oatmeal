@@ -120,7 +120,6 @@ export class Temp extends React.Component {
 	}
 
 	render() {
-		var temp;
 		// if (this.props.site === 'BCC') {
 		// 	temp = tempParser(this.state['BCC'].currentTemp);
 		// 	return (
@@ -140,7 +139,7 @@ export class Temp extends React.Component {
 		// 		</div>
 		// 	);
 		// } else {
-		temp = tempParser(this.state['LCC'].currentTemp);
+		var temp = tempParser(this.state['LCC'].currentTemp);
 		return (
 			<div>
 				<h2>Alta Weather (LCC)</h2>
