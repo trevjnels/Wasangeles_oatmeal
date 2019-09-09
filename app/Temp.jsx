@@ -82,7 +82,7 @@ export class Temp extends React.Component {
 			.get(`http://avyoats.com:3000/weather/LCC`)
 			// .then((data) => JSON.parse(data))
 			.then((data) => {
-				console.log(data['data']);
+				// console.log(data['data']);
 				var stringed = data['data'];
 				var main = stringed['main'];
 
