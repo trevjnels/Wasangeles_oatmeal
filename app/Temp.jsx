@@ -146,14 +146,14 @@ export class Temp extends React.Component {
 				<h2>Alta Weather (LCC)</h2>
 				<div>
 					<div>
-						<span>{temp} degress f</span>
+						<span>{temp} degrees F</span>
 					</div>
 					<div>
 						<span>Sunrise: {'7:04 am'}</span>
 					</div>
 					<div>
 						<span>
-							WindSpeed: {this.state.LCC.wind.speed}, Direction: {this.state.LCC.wind.direction} degrees
+							WindSpeed: {this.state.LCC.wind.speed}mph, Direction: {this.state.LCC.wind.deg} degrees
 						</span>
 					</div>
 					{/* <div>
