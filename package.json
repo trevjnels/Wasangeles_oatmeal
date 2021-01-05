@@ -17,7 +17,7 @@
     "@progress/kendo-drawing": "^1.5.12",
     "@progress/kendo-react-gauges": "^3.3.0",
     "@progress/kendo-react-intl": "^3.3.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
